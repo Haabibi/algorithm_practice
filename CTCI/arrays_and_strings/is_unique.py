@@ -10,15 +10,16 @@ Input --> Output
 'aa' -> False
 '1%a' -> True
 'aba' -> False
-
-
 """
+
 def is_unique(test_str):
     """
     Brute Force Algorithm
-    1. Iterate through the string, and check whether a specific charcacter is in the rest of the string.
-        If there is, return False. 
-        If there isn't until the end of the test_str, return True. 
+    - Iterate through the string, and check whether a specific charcacter is in the rest of the string.
+        - If there is, return False. 
+        - If there isn't until the end of the test_str, return True. 
+
+    Time Complexity: O(N^2)
 
     >>> is_unique('')
     True

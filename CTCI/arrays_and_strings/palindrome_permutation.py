@@ -46,23 +46,15 @@ def is_permuted_palindrome(string):
     >>> is_permuted_palindrome('aab')
     True 
     """
-    
+    from copy import deepcopy
     test_str = [x.lower() for x in string if x!= ' ']
-    pop_list = test_str
+    pop_list = deepcopy(test_str)
 
     for i in range(len(test_str)):
-    #    print(i, len(test_str))
         for j in range(i+1, len(test_str)):
-            print(i, j, test_str, len(test_str))
             if test_str[i] == test_str[j]:
-                print("GOT HERE!", test_str[i], test_str[j])
-                print("POP LIST1: ", pop_list)
-                #pop_list.remove(test_str[j])
-                del pop_list[j]
-                print("POP LIST2: ", pop_list)
-                #pop_list.remove(test_str[i])
-                del pop_list[i]
-                print("POP LIST3: ", pop_list)
+                pop_list.remove(test_str[j])
+                pop_list.remove(test_str[i])
                 break
     if len(pop_list) <= 1:
         return True
@@ -71,5 +63,5 @@ def is_permuted_palindrome(string):
 
 if __name__=='__main__':
     import doctest
-    # doctest.testmod()
-    is_permuted_palindrome('Tact Coa')
+    doctest.testmod()
+    #is_permuted_palindrome('Tact Coa')

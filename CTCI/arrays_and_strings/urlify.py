@@ -11,11 +11,11 @@ Output: 'Mr%20John%20Smith'
 Type: String, Int -> String 
 
 * Assume there is no space at the front
-* Assume there is only one space between words
+* Assume there can only exist one space between words
+* String with only space is not allowed 
+  ex) '  ', 2 -X-> '%20%20'
 
 Input -> Output
-' ', 1 -> '%20' 
-'  ', 2 -> '%20%20' 
 'a ', 1 -> 'a'
 'a  ', 2 -> '%20a'
 'a  ', 1 -> 'a'
@@ -24,20 +24,32 @@ Input -> Output
 
 def urlify(url, length):
     """
-    Implementation:
-    - Trim the end of the string 
-    - 
-
+    >>> urlify('Mr John Smith    ', 13)
+    'Mr%20John%20Smith'
+    >>> urlify('Mr John Smith    ', 14)
+    'Mr%20John%20Smith%20'
+    >>> urlify(' Mr John Smith    ', 14)
+    'Mr%20John%20Smith%20'
     """
-    trimmed_url = url.strip()
-    trimmed_list = trimmed_url.split()
-    final_str = ''
-    for word in trimmed_list:
-        final_str += word
-        length -= len(word)
-
-    return 
+    
+    trimmed_list = url.split(' ')
+    new_list = []
+    idx = 0
+    while length >= 0:
+        new_list.append(trimmed_list[idx])
+        if trimmed_list[idx] == '':
+            length -= 1
+        else:
+            length -= len(trimmed_list[idx])
+            length -= 1 # space between words
+        idx += 1
+    
+    
+    output = reduce(lambda x, y: x +'%20'+ y, new_list)
+    
+    return output 
 
 if __name__=='__main__':
     import doctest
+    from functools import reduce
     doctest.testmod()

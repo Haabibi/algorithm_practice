@@ -24,9 +24,13 @@ To insert a key and a value, which can be any type, do the following:
 ### ArrayList and Resizable Arrays
 **ArrayList** is an array that resizes itself. 
 * O(1) accsess
+* Amortized Insertion Runtime: O(1) 
 
 ### StringBuilder
 Simply creates a resizable array of all the strings, copying them back to a string only when necessary 
+No inplace. Immutable. 
+
+Thus use append on list and lazily concatenate letters to make a string. 
 
 **Try building my own version of *StringBuilder, HashTable & ArrayList***
 

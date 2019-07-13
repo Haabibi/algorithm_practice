@@ -30,6 +30,11 @@ def zero_matrix(matrix):
     Time Complexity: O(N1 + N2) - N1 for going through matrix to find indices of zeros
                                 - N2 for going through zero_list to change into zeros
     Space Complexity: O(N) - N depending on the number of zeros /for making zero list/                           - X require additional space for matrix
+    * Question: 
+    matrix[row] = list(map(lambda x: x*0, matrix[row])) 
+    this line seems to consume additional space 
+    makes list first and replaces original nums to zero 
+    Thus Space Complexity >> O(N + N*M), N: number of zero row / M: number of items inthe row  
     """
 
     zero_list = []
@@ -40,11 +45,34 @@ def zero_matrix(matrix):
     
     for index in zero_list:
         row, column = index
+        # changing row to zero
         matrix[row] = list(map(lambda x: x*0, matrix[row]))
+        # changing col to zero 
         for i in range(len(matrix)):
             matrix[i][column] = 0
 
     return matrix
+
+# Improvement -
+# the current implementation might change a row/column to already-zero-changed row/col
+# which causes redundant computation 
+# try pruning zero_list! 
+
+def better_zero_matrix(better):
+    """
+    Implementation: Make a flag 
+    - iterate through the matrix 
+    - if zero is found, 
+        - change the number in the first col/ row num to zero 
+        ( X dynamically change? ) 
+    - iterate through the first column / row 
+        - if zero found in the first row,
+            - change all the numbers in that column to zero
+        - if zero found in the first col,
+            - change all the numbers in that row to zero 
+    """
+    
+
 if __name__=='__main__':
    import doctest
    doctest.testmod()

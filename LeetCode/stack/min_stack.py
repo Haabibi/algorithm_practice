@@ -19,8 +19,8 @@ minStack.top();      --> Returns 0.
 minStack.getMin();   --> Returns -2.
 """
 
-class MinStack(object):
 
+class MinStack(object):
     def __init__(self):
         """
         initialize your data structure here.
@@ -64,8 +64,9 @@ class MinStack(object):
         :rtype: int
         """
         return self.min
-        
-if __name__=='__main__':
+
+
+if __name__ == "__main__":
     obj = MinStack()
     obj.push(1)
     obj.push(3)
@@ -77,4 +78,3 @@ if __name__=='__main__':
     obj.pop()
     print("TOP: ", obj.top())
     print("MIN: ", obj.getMin())
-    

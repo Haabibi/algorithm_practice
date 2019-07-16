@@ -12,6 +12,7 @@ Input --> Output
 'aba' -> False
 """
 
+
 def is_unique(test_str):
     """
     Brute Force Algorithm
@@ -36,15 +37,16 @@ def is_unique(test_str):
     >>> is_unique('abcdefg') 
     True
     """
-    
+
     for i in range(len(test_str)):
-        for j in range(i+1, len(test_str)):
+        for j in range(i + 1, len(test_str)):
             if test_str[i] == test_str[j]:
                 return False
 
     return True
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     import doctest
+
     doctest.testmod()

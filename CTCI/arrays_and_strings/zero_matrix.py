@@ -10,6 +10,7 @@ TYPE: matrix -> matrix
 
 """
 
+
 def zero_matrix(matrix):
     """
     Implementation
@@ -38,25 +39,27 @@ def zero_matrix(matrix):
     """
 
     zero_list = []
-    for i in range(len(matrix)): # row
+    for i in range(len(matrix)):  # row
         for j in range(len(matrix[i])):
             if matrix[i][j] == 0:
                 zero_list.append((i, j))
-    
+
     for index in zero_list:
         row, column = index
         # changing row to zero
-        matrix[row] = list(map(lambda x: x*0, matrix[row]))
-        # changing col to zero 
+        matrix[row] = list(map(lambda x: x * 0, matrix[row]))
+        # changing col to zero
         for i in range(len(matrix)):
             matrix[i][column] = 0
 
     return matrix
 
+
 # Improvement -
 # the current implementation might change a row/column to already-zero-changed row/col
-# which causes redundant computation 
-# try pruning zero_list! 
+# which causes redundant computation
+# try pruning zero_list!
+
 
 def better_zero_matrix(better):
     """
@@ -71,9 +74,9 @@ def better_zero_matrix(better):
         - if zero found in the first col,
             - change all the numbers in that row to zero 
     """
-    
 
-if __name__=='__main__':
-   import doctest
-   doctest.testmod()
 
+if __name__ == "__main__":
+    import doctest
+
+    doctest.testmod()

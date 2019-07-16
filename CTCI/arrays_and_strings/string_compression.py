@@ -15,6 +15,7 @@ STRING -> STRING
 
 """
 
+
 def compress_string(string):
     """
     Implementation 
@@ -48,12 +49,12 @@ def compress_string(string):
         raise AssertionError("WRONG INPUT TYPE")
 
     if len(string) == 0:
-        return ''
-    
+        return ""
+
     new_char = string[0]
     output = new_char
     cnt = 1
-    
+
     # iterate from the second char to the second to the last
     for char in string[1:]:
         if new_char == char:
@@ -61,18 +62,20 @@ def compress_string(string):
         else:
             # new_char != char -> meaning, new char is observed
             # append the counter for the previous char
-            output +=  str(cnt)
+            output += str(cnt)
             # set the counter back to 1 and new_char to new encountered char
             cnt = 1
             new_char = char
             # append the newly encountered char
             output += new_char
-            
-    if cnt>0:
+
+    if cnt > 0:
         output += str(cnt)
 
     return output
 
-if __name__=='__main__':
+
+if __name__ == "__main__":
     import doctest
+
     doctest.testmod()

@@ -21,6 +21,7 @@ Questions?
 
 """
 
+
 def check_permutation(str1, str2):
     """
     Implementation:
@@ -54,6 +55,8 @@ def check_permutation(str1, str2):
 
     return False
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     import doctest
+
     doctest.testmod()

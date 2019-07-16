@@ -14,20 +14,24 @@ Input1:
 ]
 """
 
+
 def clockwise_rotate(matrix):
     """
     Transpose the matrix first 
 
     """
     # transpose matrix
-    transpose_matrix = [[matrix[row_idx][col_idx] for row_idx in range(len(matrix))] for col_idx in range(len(matrix[0]))]
+    transpose_matrix = [
+        [matrix[row_idx][col_idx] for row_idx in range(len(matrix))]
+        for col_idx in range(len(matrix[0]))
+    ]
 
     # flip cols
-    #flip_matrix = [[matrix[i][len(matrix-j)] for i in range(len(matrix))] for j in range(len(matrix[0])) ]
-    #print(flip_matrix) 
-        
-    
+    # flip_matrix = [[matrix[i][len(matrix-j)] for i in range(len(matrix))] for j in range(len(matrix[0])) ]
+    # print(flip_matrix)
+
     return flip_matrix
+
 
 def counter_clockwise_rotate(matrix):
     """
@@ -48,26 +52,28 @@ def counter_clockwise_rotate(matrix):
 
     """
     # transpose matrix
-    transpose_matrix = [[matrix[row_idx][col_idx] for row_idx in range(len(matrix))] for col_idx in range(len(matrix[0]))]
+    transpose_matrix = [
+        [matrix[row_idx][col_idx] for row_idx in range(len(matrix))]
+        for col_idx in range(len(matrix[0]))
+    ]
 
     # flip rows
-    flip_matrix = [[transpose_matrix[i]] for i in range(len(transpose_matrix)-1,-1,-1)]
+    flip_matrix = [
+        [transpose_matrix[i]] for i in range(len(transpose_matrix) - 1, -1, -1)
+    ]
 
     return flip_matrix
 
 
-# counter-clockwise: [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0])-1, -1,-1)]   # j: row / i: col            
+# counter-clockwise: [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0])-1, -1,-1)]   # j: row / i: col
 # matrix transpose -> flip the row: clockwise
 # matrix transpose -> flip the col: counter-clockwise
 
 
-if __name__=='__main__':
-    INPUT1 = [ 
-                [1, 2, 3],
-                [4, 0, 0],
-                [7, 8, 9],
-            ]
+if __name__ == "__main__":
+    INPUT1 = [[1, 2, 3], [4, 0, 0], [7, 8, 9]]
     print(clockwise_rotate(INPUT1))
 
     import doctest
+
     doctest.testmod()

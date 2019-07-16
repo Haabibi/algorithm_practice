@@ -13,9 +13,12 @@ http://whocouldthat.be/visualizing-string-matching/
 
 
 """
+
+
 def is_substring(s1, s2):
     if s1 in s2:
         return True
+
 
 def string_rotation(s1, s2):
     """
@@ -24,8 +27,9 @@ def string_rotation(s1, s2):
     check if s2 is a substring of 2*s1
 
     """
-     
-    return is_substring(s1+s1, s2)
 
-if __name__=='__main__':
-    print(string_rotation('erbottlewat', 'waterbottle'))
+    return is_substring(s1 + s1, s2)
+
+
+if __name__ == "__main__":
+    print(string_rotation("erbottlewat", "waterbottle"))

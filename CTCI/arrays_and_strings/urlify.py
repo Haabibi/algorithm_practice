@@ -22,6 +22,7 @@ Input -> Output
 
 """
 
+
 def urlify(url, length):
     """
     >>> urlify('Mr John Smith    ', 13)
@@ -31,25 +32,26 @@ def urlify(url, length):
     >>> urlify(' Mr John Smith    ', 14)
     'Mr%20John%20Smith%20'
     """
-    
-    trimmed_list = url.split(' ')
+
+    trimmed_list = url.split(" ")
     new_list = []
     idx = 0
     while length >= 0:
         new_list.append(trimmed_list[idx])
-        if trimmed_list[idx] == '':
+        if trimmed_list[idx] == "":
             length -= 1
         else:
             length -= len(trimmed_list[idx])
-            length -= 1 # space between words
+            length -= 1  # space between words
         idx += 1
-    
-    
-    output = reduce(lambda x, y: x +'%20'+ y, new_list)
-    
-    return output 
 
-if __name__=='__main__':
+    output = reduce(lambda x, y: x + "%20" + y, new_list)
+
+    return output
+
+
+if __name__ == "__main__":
     import doctest
     from functools import reduce
+
     doctest.testmod()

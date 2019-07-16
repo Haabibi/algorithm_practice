@@ -22,6 +22,7 @@ Questions:
 
 """
 
+
 def is_permuted_palindrome(string):
     """
     Implementation
@@ -47,11 +48,12 @@ def is_permuted_palindrome(string):
     True 
     """
     from copy import deepcopy
-    test_str = [x.lower() for x in string if x!= ' ']
+
+    test_str = [x.lower() for x in string if x != " "]
     pop_list = deepcopy(test_str)
 
     for i in range(len(test_str)):
-        for j in range(i+1, len(test_str)):
+        for j in range(i + 1, len(test_str)):
             if test_str[i] == test_str[j]:
                 pop_list.remove(test_str[j])
                 pop_list.remove(test_str[i])
@@ -61,7 +63,9 @@ def is_permuted_palindrome(string):
     else:
         return False
 
-if __name__=='__main__':
+
+if __name__ == "__main__":
     import doctest
+
     doctest.testmod()
-    #is_permuted_palindrome('Tact Coa')
+    # is_permuted_palindrome('Tact Coa')

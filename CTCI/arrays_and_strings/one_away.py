@@ -17,6 +17,7 @@ pale, bake -> False
 
 """
 
+
 def one_away(str1, str2):
     """
     Implementation
@@ -35,26 +36,25 @@ def one_away(str1, str2):
 
     """
 
-
     # if two strings are exactly same -> return False
     if str1 == str2:
         return False
 
-    # if two lengths differ 
+    # if two lengths differ
     if len(str1) != len(str2):
-        
+
         # if length of strings differ by more than one
         if abs(len(str1) - len(str2)) > 1:
             return False
-        
+
         # compare length of two strings
         if len(str1) > len(str2):
             longer_str, shorter_str = str1, str2
         else:
             longer_str, shorter_str = str2, str1
-        
+
         for i in range(len(longer_str)):
-            if longer_str[:i] + longer_str[i+1:] == shorter_str:
+            if longer_str[:i] + longer_str[i + 1 :] == shorter_str:
                 return True
         return False
     else:
@@ -62,7 +62,10 @@ def one_away(str1, str2):
         for i in range(len(str1)):
             if str1[i] != str2[i]:
                 diff += 1
-        return False if diff >1 else True
-if __name__=='__main__':
+        return False if diff > 1 else True
+
+
+if __name__ == "__main__":
     import doctest
+
     doctest.testmod()

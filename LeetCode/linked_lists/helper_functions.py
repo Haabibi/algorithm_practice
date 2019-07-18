@@ -1,6 +1,8 @@
 """
 Helper functions for visualizing linked lists
 """
+
+
 class ListNode:
     def __init__(self, x):
         self.val = x
@@ -16,6 +18,15 @@ def createLinkedList(array):
         cur_head.next = ListNode(item)
         cur_head = cur_head.next
     return node
+
+
+def appendLinkedList(head):
+    cur_head = head
+    output = []
+    while cur_head:
+        output.append(cur_head.val)
+        cur_head = cur_head.next
+    return output
 
 
 def printLinkedList(head):

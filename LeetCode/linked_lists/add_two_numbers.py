@@ -44,10 +44,13 @@ class Solution(object):
 	>>> appendLinkedList(s.addTwoNumbers(createLinkedList([5, 5, 2]), createLinkedList([5, 4, 1])))
 	[0, 0, 4]
 	
-        Time Complexity: O(N1 + N2) 
+        Time Complexity: O(max(N1,N2)) 
         - N1: length of l1 
         - N2: length of l2
-        Space Complexity: O(N) - creating new linked list where all nodes are added up
+        - traverse as many items as there is in the longer list
+        Space Complexity: O(max(N1, N2)) 
+        - creating new linked list where all nodes are added up
+        - space will also depend on the size of the longer list
         """
         new_head = ListNode(-1)
         output = new_head

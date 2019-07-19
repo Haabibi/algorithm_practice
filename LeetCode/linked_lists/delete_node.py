@@ -27,3 +27,15 @@ Note:
 * The given node will not be the tail and it will always be a valid node of the linked list.
 * Do not return anything from your function. 
 """
+
+
+class Solution(object):
+    def deleteNode(self, node):
+        """
+        :type node: ListNode
+        :rtype: void Do not return anything, modify node in-place instead.
+        """
+        
+        node.val = node.next.val
+        node.next = node.next.next
+

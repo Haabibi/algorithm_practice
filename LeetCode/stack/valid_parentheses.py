@@ -40,19 +40,44 @@ class Solution(object):
         """
         :type s: str
         :rtype: bool
+        >>> s = Solution()
+        >>> s.isValid('()')
+        True
+        >>> s.isValid('()[]{}')
+        True
+        >>> s.isValid(')}{({))[{{[}')
+        False
+        >>> s.isValid('){')
+        False
+        >>> s.isValid(')')
+        False
+        >>> s.isValid('){}')
+        False
+
+        Time Complexity: O(N)
+        - traversing string 
+        Space Complexity: O(N)
+        - extra space for mapping parentheses pairs
         """
-        pair = {"(": ")", "{": "}", "[": "]"}
         stack = []
+        pair_mapping = {")": "(", "}": "{", "]": "["}
+          
         for char in s:
-            if char in pair.keys():
-                stack.append(char)
-            else:
-                if len(stack) > 0 and char == pair[stack[-1]]:
-                    # if there is a matching pair
+            if char in pair_mapping:
+                if len(stack) == 0:
+                    return False
+                elif stack[-1] == pair_mapping[char]:
                     stack.pop()
                 else:
                     stack.append(char)
+            else:
+              stack.append(char)
+          
         if len(stack) == 0:
             return True
         else:
             return False
+
+if __name__=='__main__':
+    import doctest
+    doctest.testmod()

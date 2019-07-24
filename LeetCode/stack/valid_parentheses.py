@@ -61,7 +61,7 @@ class Solution(object):
         """
         stack = []
         pair_mapping = {")": "(", "}": "{", "]": "["}
-          
+
         for char in s:
             if char in pair_mapping:
                 if len(stack) == 0:
@@ -71,13 +71,15 @@ class Solution(object):
                 else:
                     stack.append(char)
             else:
-              stack.append(char)
-          
+                stack.append(char)
+
         if len(stack) == 0:
             return True
         else:
             return False
 
-if __name__=='__main__':
+
+if __name__ == "__main__":
     import doctest
+
     doctest.testmod()

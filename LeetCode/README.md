@@ -1,9 +1,10 @@
-## CLRS Summary on Chapter 11. Hash Tables
+# Leetcode Practice 
 
-Hash table is an effective data structure for implementing dictionaries. 
-Although searching for an element in a hash table can take O(N) in the worst case, in practice, hashing performs extremely well. 
-The average time required for searching for a hash table is O(1). 
 
-Take advantage of **direct addressing** when we can afford to allocate an array that has one position for every possible key. 
+| Data Structure | No. | 
+|----------------|-----|
+| Linked List | [82. Remove Dups II](https://github.com/Haabibi/algorithm_practice/blob/master/LeetCode/82.py) |
+|             | [19. Remove Nth mode from end](https://leetcode.com/problems/remove-nth-node-from-end-of-list/description/) |
+
 
 

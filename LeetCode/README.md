@@ -30,8 +30,8 @@ Not confident at all                 Can solve the problem with ease
 |             | [232. Implement Queue Using Stacks]() | | 
 |             | [621. Task Scheduler]() | | 
 |             | []() | | 
-|             | []() | | 
-|             | []() | | 
+|Trees        | [108. Convert Sorted Array to Binary Search Tree](http://github.com/haabibi/algorithm_practice/blob/master/leetcode/108.py) | 4 | 
+|             | [199. Binary Tree Right Side View](http://github.com/haabibi/algorithm_practice/blob/master/leetcode/108.py) | 3\* | 
 |             | []() | | 
 |             | []() | | 
 |             | []() | | 

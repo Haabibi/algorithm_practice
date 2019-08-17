@@ -35,4 +35,10 @@ Not confident at all                 Can solve the problem with ease
 |             | [101. Symmetric Tree](http://github.com/haabibi/algorithm_practice/blob/master/LeetCode/101.py) | 4\* | 
 |             | [98. Validate Binary Search Tree](http://github.com/haabibi/algorithm_practice/blob/master/LeetCode/98.py) | 3\* | 
 |             | []() | | 
+|             | []() | | 
+|Heap         | [373. Find K Pairs with Smallest Sums](http://github.com/haabibi/algorithm_practice/blob/master/LeetCode/373.py) | 3 | 
+|             | []() | | 
+|             | []() | | 
+|             | []() | | 
+|             | []() | | 
 

@@ -33,6 +33,6 @@ Not confident at all                 Can solve the problem with ease
 |Trees        | [108. Convert Sorted Array to Binary Search Tree](http://github.com/haabibi/algorithm_practice/blob/master/LeetCode/108.py) | 4 | 
 |             | [199. Binary Tree Right Side View](http://github.com/haabibi/algorithm_practice/blob/master/LeetCode/199.py) | 3\* | 
 |             | [101. Symmetric Tree](http://github.com/haabibi/algorithm_practice/blob/master/LeetCode/101.py) | 4\* | 
-|             | [98. Validate Binary Search Tree](http://github.com/haabibi/algorithm_practice/blob/master/LeetCode/101.py) | 3\* | 
+|             | [98. Validate Binary Search Tree](http://github.com/haabibi/algorithm_practice/blob/master/LeetCode/98.py) | 3\* | 
 |             | []() | | 
 
